@@ -134,46 +134,49 @@ async def akasztofa(ctx, arg):
         hangembed1 = discord.Embed(colour=szinek[szin], title="Akasztófa")
         msg = await client.wait_for('message', check=None, timeout=30)
         if msg:
-            if msg.content in szobetui:
-                if msg.content not in jok:
-                    jok.append(msg.content)
-                    for i in range(len(szobetui)):
-                        if msg.content == szobetui[i]:
-                            fasza += 1
-                            eddigjo[i] = f"{szobetui[i]} "
+            if len(msg.content) == 1:
+                if msg.content in szobetui:
+                    if msg.content not in jok:
+                        jok.append(msg.content)
+                        for i in range(len(szobetui)):
+                            if msg.content == szobetui[i]:
+                                fasza += 1
+                                eddigjo[i] = f"{szobetui[i]} "
 
-                    jej = "".join(eddigjo)
+                        jej = "".join(eddigjo)
 
-                    if rontasok > 0:
-                        hangembed1.add_field(name="Helyzet:", value=hangman.status[len(guesses)])
-                        hangembed1.add_field(name="Szó:", value=f"```{jej.strip()}```")
-                        hangembed1.add_field(name="Rossz:", value=rosszak.strip(", "))
+                        if rontasok > 0:
+                            hangembed1.add_field(name="Helyzet:", value=hangman.status[len(guesses)])
+                            hangembed1.add_field(name="Szó:", value=f"```{jej.strip()}```")
+                            hangembed1.add_field(name="Rossz:", value=rosszak.strip(", "))
+                        else:
+                            hangembed1.add_field(name="Helyzet:", value=hangman.status[len(guesses)])
+                            hangembed1.add_field(name="Szó:", value=f"```{jej.strip()}```")
+                            hangembed1.add_field(name="Rossz:", value="Eddig semmi.")
+                        szin = random.randint(0,4)
+                        await ctx.send(embed=hangembed1)
                     else:
-                        hangembed1.add_field(name="Helyzet:", value=hangman.status[len(guesses)])
-                        hangembed1.add_field(name="Szó:", value=f"```{jej.strip()}```")
-                        hangembed1.add_field(name="Rossz:", value="Eddig semmi.")
-                    szin = random.randint(0,4)
-                    await ctx.send(embed=hangembed1)
-                else:
-                    await ctx.send("Ezt a betűt már próbáltad.")
+                        await ctx.send("Ezt a betűt már próbáltad.")
                     
 
-            else:
-                if msg.content not in guesses:
-                    rosszak += f"{msg.content}, "
-                    guesses.append(msg.content)
-                    rontasok += 1
-                    hangembed1.add_field(name="Helyzet:", value=hangman.status[len(guesses)])
-                    if fasza == 0:
-                        hangembed1.add_field(name="Szó:", value=f"```{guessed.strip()}```")
-                    else:
-                        hangembed1.add_field(name="Szó:", value=f"```{jej.strip()}```")
-                    hangembed1.add_field(name="Rossz:", value=rosszak.strip(", "))
-
-                    szin = random.randint(0,4)
-                    await ctx.send(embed=hangembed1)
                 else:
-                    await ctx.send("Ezt a betűt már próbáltad.")
+                    if msg.content not in guesses:
+                        rosszak += f"{msg.content}, "
+                        guesses.append(msg.content)
+                        rontasok += 1
+                        hangembed1.add_field(name="Helyzet:", value=hangman.status[len(guesses)])
+                        if fasza == 0:
+                            hangembed1.add_field(name="Szó:", value=f"```{guessed.strip()}```")
+                        else:
+                            hangembed1.add_field(name="Szó:", value=f"```{jej.strip()}```")
+                        hangembed1.add_field(name="Rossz:", value=rosszak.strip(", "))
+
+                        szin = random.randint(0,4)
+                        await ctx.send(embed=hangembed1)
+                    else:
+                        await ctx.send("Ezt a betűt már próbáltad.")
+            else:
+                await ctx.send("Csak egy betűt adj meg.")
         
         elif TimeoutError: #Ez itt nem működik. Ha senki nem válaszol,az alább látható üzenetet kéne küldenie és vége lenne a játéknak.
             await ctx.send("Túl sokáig nem válaszolt senki.")
