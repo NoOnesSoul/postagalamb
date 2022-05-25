@@ -65,11 +65,22 @@ async def slotmachine(ctx):
     slotembed = discord.Embed(colour=szinek[szin], timestamp=ctx.message.created_at, title="Slot machine")
     if elso == masodik == harmadik:
         slotembed.add_field(name="Nyertél", value=f"{icons[elso]} {icons[masodik]} {icons[harmadik]}")
+        roleVer = 'Nyert slot machine-en' #role to add
+        user = ctx.message.author #user
+        role = roleVer # change the name from roleVer to role
+        await user.add_roles(discord.utils.get(user.guild.roles, name=role))
 
     else:
         slotembed.add_field(name="Vesztettél", value=f"{icons[elso]} {icons[masodik]} {icons[harmadik]}")
     await ctx.send(embed=slotembed)
-
+"""
+@client.command()
+async def teszt(ctx):
+    roleVer = 'Nyert slot machine-en' #role to add
+    user = ctx.message.author #user
+    role = roleVer # change the name from roleVer to role
+    await user.add_roles(discord.utils.get(user.guild.roles, name=role))
+"""
 @client.command(aliases=["whois"])
 async def userinfo(ctx, member: discord.Member = None):
     szin = random.randint(0,4)
