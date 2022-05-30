@@ -204,6 +204,84 @@ async def akasztofa(ctx, arg):
         hangembed2 = discord.Embed(colour=szinek[szin], title="Akasztófa")
         hangembed2.add_field(name="Gratulálunk!", value=f"Vesztettél.\nA szó `{amivolt}` volt.")
         await ctx.send(embed=hangembed2)
-    
+
+
+# API parancsok
+
+
+@client.command(aliases=["róka"])
+async def fox(ctx):
+    foxpic = requests.get("https://randomfox.ca/floof/").json()['image']
+
+    embed = discord.Embed(colour=discord.Colour.dark_gold(), timestamp=ctx.message.created_at,
+                          title=f"Róka API")
+    embed.set_footer(text=f"Requested by {ctx.author}")
+
+    embed.set_image(url=foxpic)
+    await ctx.send(embed=embed)
+
+
+@client.command(aliases=["kutya", "lutyuly", "tilimancs"])
+async def dog(ctx):
+    dogpic = requests.get("https://random.dog/woof.json").json()['url']
+
+    embed = discord.Embed(colour=discord.Colour.purple(), timestamp=ctx.message.created_at,
+                          title=f"Kutya API")
+    embed.set_footer(text=f"Requested by {ctx.author}")
+
+    embed.set_image(url=dogpic)
+    await ctx.send(embed=embed)
+
+
+@client.command(aliases=["cicafiú", "cicafiu"])
+async def catboy(ctx):
+    catboypic = requests.get("https://api.catboys.com/img").json()['url']
+
+    embed = discord.Embed(colour=discord.Colour.purple(), timestamp=ctx.message.created_at,
+                          title=f"Catboy API")
+    embed.set_footer(text=f"Requested by {ctx.author}")
+
+    embed.set_image(url=catboypic)
+    await ctx.send(embed=embed)
+
+
+@client.command(aliases=["tények", "uselessfact"])
+async def useless(ctx):
+    uselessFact = requests.get("https://uselessfacts.jsph.pl/random.json?language=en").json()['text']
+    uselessSource = requests.get("https://uselessfacts.jsph.pl/random.json?language=en").json()['source_url']
+
+    embed = discord.Embed(colour=discord.Colour.purple(), timestamp=ctx.message.created_at,
+                          title=f"Useless API")
+    embed.add_field(name="Useless Fact!", value=f"{uselessFact}\n[Source]({uselessSource})")
+    embed.set_footer(text=f"Requested by {ctx.author}")
+
+    await ctx.send(embed=embed)
+
+
+@client.command(aliases=["tény", "fact"])
+async def funfact(ctx):
+    uselessFact = requests.get("https://uselessfacts.jsph.pl/random.json?language=en").json()['text']
+    uselessSource = requests.get("https://uselessfacts.jsph.pl/random.json?language=en").json()['source_url']
+
+    embed = discord.Embed(colour=discord.Colour.purple(), timestamp=ctx.message.created_at,
+                          title=f"Useless API")
+    embed.add_field(name="Useless Fact!", value=f"{uselessFact}\n[Source]({uselessSource})")
+    embed.set_footer(text=f"Requested by {ctx.author}")
+
+    await ctx.send(embed=embed)
+
+
+@client.command(aliases=["raikonnen", "f1quote"])
+async def kimi(ctx):
+    kimiqList = requests.get("https://kimiquotes.herokuapp.com/quotes").json()
+    i = random.randint(0, len(kimiqList))
+    kimiquote = kimiqList[i]['quote']
+
+    embed = discord.Embed(colour=discord.Colour.purple(), timestamp=ctx.message.created_at,
+                          title=f"Kimi Räikkönen Radio API")
+    embed.add_field(name="Kimi Räikkönen says...", value=kimiquote)
+    embed.set_footer(text=f"Requested by {ctx.author}")
+
+    await ctx.send(embed=embed)
 
 client.run(settings.TOKEN)
