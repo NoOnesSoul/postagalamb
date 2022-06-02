@@ -7,6 +7,7 @@ Készítés kezdete: 2022.05.16
 # Tartalom
 * [Készítők](#készítette)
 * [Parancsok](#parancsok)
+* [A projekt menete](#a-projekt-menete)
 
 # Készítette
 **Valek Dániel**
@@ -64,3 +65,8 @@ További parancsok listájának megtekintéséhez használhatóak:
 * `/build` A parancs használatával építhetsz. (koncepció)
 
 A `/chop` és `/mine` parancsok működnek, de módosításra várnak.
+
+# A projekt menete
+A fő funkció, ami tervben volt, hogy egy adott csatornába elküldi egy bizonyos Facebook oldal posztjait, hogy az emberek értesüljenek eseményekről.
+Ezzel a probléma az volt, hogy a Facebook oldal az esetek többségében olyan eseményekről posztol, amelyeknek már vége volt.
+Ennek tekintetében ezt az ötletet el kellett vetnünk.
