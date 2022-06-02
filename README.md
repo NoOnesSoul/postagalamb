@@ -55,7 +55,10 @@ További parancsok listájának megtekintéséhez használhatóak:
 * `/bal` A parancs használatával megtudod, hogy mennyi pénzed van összesen.
 
 **Tervben lévő/felfüggesztett parancsok:**
-* `/ascii` A megadott szöveget ascii-ban visszaküldi. ![ascii példa](https://media.discordapp.net/attachments/579188421067538442/981889055103000606/unknown.png)
+* `/ascii` A megadott szöveget ascii-ban visszaküldi.
+
+![ascii példa](https://media.discordapp.net/attachments/579188421067538442/981889055103000606/unknown.png)
+
 * `/chop` A parancs használatával fát vághatsz.
 * `/mine` A parancs használatával bányászhatsz.
 * `/build` A parancs használatával építhetsz. (koncepció)
