@@ -63,4 +63,4 @@ További parancsok listájának megtekintéséhez használhatóak:
 * `/mine` A parancs használatával bányászhatsz.
 * `/build` A parancs használatával építhetsz. (koncepció)
 
-A `/chop` és `/mine` parancsok működnek, de módosításuk van tervben.
+A `/chop` és `/mine` parancsok működnek, de módosításra várnak.
