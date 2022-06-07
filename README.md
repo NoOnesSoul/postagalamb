@@ -31,7 +31,7 @@ További parancsok listájának megtekintéséhez használhatóak:
 * `/help fun`
 * `/help eco`
 
-![alap help](https://media.discordapp.net/attachments/579188421067538442/981866839074283530/unknown.png)
+![alap help](https://media.discordapp.net/attachments/579188421067538442/983657173974388756/unknown.png)
 ![fun help](https://media.discordapp.net/attachments/579188421067538442/981883391693701170/unknown.png?width=474&height=630)
 ![economy help](https://media.discordapp.net/attachments/579188421067538442/981883738566852658/unknown.png?width=600&height=630)
 
