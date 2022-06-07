@@ -54,11 +54,9 @@ További parancsok listájának megtekintéséhez használhatóak:
 * `/fish` A parancs használatával horgászhatsz.
 * `/inv` Felsorolja a leltáradban lévő tárgyakat és azok darabszámát.
 * `/bal` A parancs használatával megtudod, hogy mennyi pénzed van összesen.
+* `/ascii` A megadott szöveget ASCII-ban kiadja.
 
 **Tervben lévő/felfüggesztett parancsok:**
-* `/ascii` A megadott szöveget ascii-ban visszaküldi.
-
-![ascii példa](https://media.discordapp.net/attachments/579188421067538442/981889055103000606/unknown.png)
 
 * `/chop` A parancs használatával fát vághatsz.
 * `/mine` A parancs használatával bányászhatsz.
