@@ -71,3 +71,4 @@ Ennek tekintetében ezt az ötletet el kellett vetnünk.
 [Dani](https://github.com/HazzyWazz) mindenkinek kiosztotta a feladatokat [Trello](https://trello.com)-n, amiknek illett késznek lennie a határidőre.
 Ez magában foglalja a prezentációt, a robot alap parancsait és az API parancsokat.
 Mindenki neki is állt a kiosztott feladatok elkészítéséhez.
+Amonger.
