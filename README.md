@@ -4,6 +4,8 @@ Discord robot projekt.
 
 Készítés kezdete: 2022.05.16
 
+Jelenlegi sorok száma a fő fájlban: 635
+
 # Tartalom
 * [Készítők](#készítette)
 * [Parancsok](#parancsok)
