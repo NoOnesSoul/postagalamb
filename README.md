@@ -12,17 +12,17 @@ Jelenlegi sorok száma a fő fájlban: 635
 * [A projekt menete](#a-projekt-menete)
 
 # Készítette
-[**Valek Dániel**](https://github.com/HazzyWazz)
+[**HazzyWazz**](https://github.com/HazzyWazz)
 * API parancsok
 * Feladatok kezelése, kiosztása
 
-[**Tóthmajor Dóra**](https://github.com/AkrodKitten)
+[**AkrodKitten**](https://github.com/AkrodKitten)
 * Ötletadó
 * Prezentáció
 * Hetesek parancs
 * Robot felhasználó tulajdonságai
 
-[**Fodor Martin**](https://github.com/NoOnesSoul)
+[**NoOnesSoul**](https://github.com/NoOnesSoul)
 * Alap parancsok
 * Economy
 
@@ -70,7 +70,7 @@ A `/chop` és `/mine` parancsok működnek, de módosításra várnak.
 A fő funkció, ami tervben volt, hogy egy adott csatornába elküldi egy bizonyos Facebook oldal posztjait, hogy az emberek értesüljenek eseményekről.
 Ezzel a probléma az volt, hogy a Facebook oldal az esetek többségében olyan eseményekről posztol, amelyeknek már vége volt.
 Ennek tekintetében ezt az ötletet el kellett vetnünk.
-[Dani](https://github.com/HazzyWazz) mindenkinek kiosztotta a feladatokat [Trello](https://trello.com)-n, amiknek illett késznek lennie a határidőre.
+[Hazzy](https://github.com/HazzyWazz) mindenkinek kiosztotta a feladatokat [Trello](https://trello.com)-n, amiknek illett késznek lennie a határidőre.
 Ez magában foglalja a prezentációt, a robot alap parancsait és az API parancsokat.
 Mindenki neki is állt a kiosztott feladatok elkészítéséhez.
 Amonger.
